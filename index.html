@@ -12,8 +12,20 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
+		<style>
+		.spotify-widget {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 300px;
+			z-index: 100;
+		}
+		</style>
 	</head>
 	<body class="is-preload">
+		<div class="spotify-widget">
+			<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ESvfrHfNuAtkZp8SMJBOY?utm_source=generator&theme=0" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+		</div>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -47,11 +59,10 @@
 						<div class="content">
 							<ul class="feature-icons">
 								<li class="icon solid fa-code">coding languages</li>
-								<li class="icon solid fa-laptop">frameworks</li>
-								<li class="icon solid fa-bolt">courses</li>
-								<li class="icon solid fa-signal">GPA</li>
+								<li class="icon solid fa-desktop">frameworks</li>
+								<li class="icon solid fa-graduation-cap">courses</li>
+								<li class="icon solid fa-user"></i>hobbies</li>
 								<li class="icon solid fa-map-marker-alt">Denver, CO</li>
-								<li class="icon solid fa-cog">hobbies</li>
 							</ul>
 						</div>
 					</section>
