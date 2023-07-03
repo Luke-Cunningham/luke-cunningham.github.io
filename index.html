@@ -143,13 +143,13 @@
 				<h2> Get In Touch </h2>
 			</header>
 			<div class="content">
-				<form>
+				<form method="POST" action="https://formspree.io/f/mrgwzvpn" id="contactForm">
 					<div class="fields">
 						<div class="field half">
 							<input type="text" name="name" id="name" placeholder="Name" />
 						</div>
 						<div class="field half">
-							<input type="email" name="email" id="email" placeholder="Email" />
+							<input type="email" name="_replyto" id="email" placeholder="Email" />
 						</div>
 						<div class="field">
 							<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
@@ -161,14 +161,36 @@
 				</form>
 			</div>
 		</section>
-	</div>
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			document.getElementById('contactForm').addEventListener('submit', function (e) {
+				e.preventDefault();
+
+				var name = document.getElementById('name').value;
+				var email = document.getElementById('email').value;
+				var message = document.getElementById('message').value;
+
+				if (!name || !email || !message) {
+					alert('All fields must be filled out.');
+					return false;
+				}
+
+				if (!email.includes('@')) {
+					alert('Invalid email address.');
+					return false;
+				}
+
+				e.target.submit();
+			});
+		</script>
 
 </body>
+
 </html>
