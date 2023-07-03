@@ -8,24 +8,15 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="stylesheet" href="assets/css/spotifyWidget.css" />
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
-	<style>
-		.spotify-widget {
-			position: fixed;
-			bottom: 20px;
-			right: 20px;
-			width: 300px;
-			z-index: 100;
-		}
-	</style>
 </head>
 
 <body class="is-preload">
-
+	
 	<div class="spotify-widget">
 		<iframe style="border-radius:12px"
 			src="https://open.spotify.com/embed/track/0ESvfrHfNuAtkZp8SMJBOY?utm_source=generator&theme=0" width="300"
@@ -168,28 +159,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-
-		<script>
-			document.getElementById('contactForm').addEventListener('submit', function (e) {
-				e.preventDefault();
-
-				var name = document.getElementById('name').value;
-				var email = document.getElementById('email').value;
-				var message = document.getElementById('message').value;
-
-				if (!name || !email || !message) {
-					alert('All fields must be filled out.');
-					return false;
-				}
-
-				if (!email.includes('@')) {
-					alert('Invalid email address.');
-					return false;
-				}
-
-				e.target.submit();
-			});
-		</script>
+		<script src="assets/js/formValidation.js"></script>
 
 </body>
 
