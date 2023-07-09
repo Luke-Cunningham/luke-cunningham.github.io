@@ -68,6 +68,10 @@ input, select, textarea {
 
 /* Basic */
 
+	.slider {
+		width: 200px;
+	}
+
 	@-ms-viewport {
 		width: device-width;
 	}
